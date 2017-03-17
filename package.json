@@ -15,6 +15,6 @@
     "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
   },
   "dependencies": {
-    "serve-index": "^1.8.0"
+    "serve-index-75lb": "^1.8.1"
   }
 }
