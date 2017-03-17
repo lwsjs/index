@@ -1,8 +1,8 @@
 {
-  "name": "local-web-server-index",
+  "name": "lws-index",
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.0.0",
-  "description": "local-web-server-index",
+  "description": "Serve-index feature for lws",
   "repository": "https://github.com/local-web-server/index.git",
   "license": "MIT",
   "main": "./lib/index.js",
