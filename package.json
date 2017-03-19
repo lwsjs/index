@@ -3,7 +3,7 @@
   "author": "Lloyd Brookes <75pound@gmail.com>",
   "version": "0.0.0",
   "description": "Serve-index feature for lws",
-  "repository": "https://github.com/local-web-server/index.git",
+  "repository": "https://github.com/lwsjs/index.git",
   "license": "MIT",
   "main": "./lib/index.js",
   "keywords": [],
