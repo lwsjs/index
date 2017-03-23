@@ -1,6 +1,20 @@
-var test = require('tape')
-var lib = require('../')
+const TestRunner = require('test-runner')
+const Index = require('../')
+const Lws = require('lws')
+const request = require('req-then')
+const a = require('assert')
 
-test('first', function (t) {
+const runner = new TestRunner()
 
+runner.test('no options', async function () {
+  const port = 9000 + this.index
+  const lws = new Lws({
+    stack: Index,
+    port: port
+  })
+  lws.start()
+  const response = await request(`http://localhost:${port}/test/fixture`)
+  lws.server.close()
+  a.ok(/listing directory/.test(response.data.toString()))
+  a.ok(/class="icon/.test(response.data.toString()))
 })

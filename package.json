@@ -6,15 +6,21 @@
   "repository": "https://github.com/lwsjs/index.git",
   "license": "MIT",
   "main": "./lib/index.js",
-  "keywords": [],
+  "keywords": [
+    "lws"
+  ],
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=7.6"
   },
   "scripts": {
-    "test": "tape test/*.js",
-    "docs": "jsdoc2md -t jsdoc2md/README.md lib/*.js > README.md; echo"
+    "test": "test-runner test/*.js"
   },
   "dependencies": {
     "serve-index-75lb": "^1.8.1"
+  },
+  "devDependencies": {
+    "lws": "^1.0.0-pre.4",
+    "req-then": "^0.6.1",
+    "test-runner": "^0.3.0"
   }
 }
