@@ -1,6 +1,9 @@
 'use strict'
 
 class Index {
+  description () {
+    return 'Serves directory listings.'
+  }
   optionDefinitions () {
     return [
       {
@@ -23,13 +26,13 @@ class Index {
     ]
   }
   middleware (options) {
-    const path = options['index.root'] || options.directory || process.cwd()
+    const path = options.indexRoot || options.directory || process.cwd()
     if (path) {
       const serveIndex = require('serve-index-75lb')
       const index = serveIndex(path, {
         icons: true,
-        hidden: options['index.hidden'],
-        view: options['index.view']
+        hidden: options.indexHidden,
+        view: options.indexView
       })
       return (ctx, next) => {
         return new Promise((resolve, reject) => {

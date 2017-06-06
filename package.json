@@ -5,13 +5,9 @@
   "description": "Serve-index feature for lws",
   "repository": "https://github.com/lwsjs/index.git",
   "license": "MIT",
-  "main": "./lib/index.js",
   "keywords": [
-    "lws"
+    "lws", "index"
   ],
-  "engines": {
-    "node": ">=7.6"
-  },
   "scripts": {
     "test": "test-runner test/*.js"
   },
