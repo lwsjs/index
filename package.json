@@ -1,12 +1,13 @@
 {
   "name": "lws-index",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Serve-index feature for lws",
   "repository": "https://github.com/lwsjs/index.git",
   "license": "MIT",
   "keywords": [
-    "lws", "index"
+    "lws",
+    "index"
   ],
   "scripts": {
     "test": "test-runner test/*.js"
