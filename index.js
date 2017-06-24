@@ -1,6 +1,4 @@
-'use strict'
-
-class Index {
+module.exports = MiddlewareBase => class Index extends MiddlewareBase {
   description () {
     return 'Serves directory listings.'
   }
@@ -29,11 +27,11 @@ class Index {
     const path = options.indexRoot || options.directory || process.cwd()
     if (path) {
       const serveIndex = require('serve-index-75lb')
-      const index = serveIndex(path, {
-        icons: true,
-        hidden: options.indexHidden,
-        view: options.indexView
-      })
+      const indexOptions = { icons: true }
+      if (options.indexHidden !== undefined) indexOptions.indexHidden = options.indexHidden
+      if (options.indexView !== undefined) indexOptions.indexView = options.indexView
+      this.emit('verbose', 'middleware.index.config', indexOptions)
+      const index = serveIndex(path, indexOptions)
       return (ctx, next) => {
         return new Promise((resolve, reject) => {
           index(ctx.req, ctx.res, resolve)
@@ -42,5 +40,3 @@ class Index {
     }
   }
 }
-
-module.exports = Index

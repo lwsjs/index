@@ -4,15 +4,9 @@
 [![Dependency Status](https://david-dm.org/lwsjs/index.svg)](https://david-dm.org/lwsjs/index)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
-# index
+# lws-index
 
-[Serve-index](https://github.com/expressjs/serve-index) feature for lws. Adds these options.
-
-```
---index.root path              Index root directory, defaults to --directory or the current directory.
---index.hidden                 Show hidden files.
---index.view name              Display mode, either `tiles` or `details`. Defaults to tiles.
-```
+[Serve-index](https://github.com/expressjs/serve-index) middleware for lws. Adds these options.
 
 * * *
 
