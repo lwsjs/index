@@ -13,10 +13,10 @@
     "test": "test-runner test.js"
   },
   "dependencies": {
-    "serve-index-75lb": "^1.8.1"
+    "serve-index-75lb": "^1.9.0"
   },
   "devDependencies": {
-    "lws": "^1.0.0-pre2.1",
+    "lws": "^1.0.0-pre2.4",
     "req-then": "^0.6.2",
     "test-runner": "^0.4.0"
   }
