@@ -34,7 +34,11 @@ module.exports = MiddlewareBase => class Index extends MiddlewareBase {
       const index = serveIndex(path, indexOptions)
       return (ctx, next) => {
         return new Promise((resolve, reject) => {
-          index(ctx.req, ctx.res, resolve)
+          function expressNext () {
+            next()
+            resolve()
+          }
+          index(ctx.req, ctx.res, expressNext, ctx)
         })
       }
     }
