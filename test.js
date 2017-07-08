@@ -9,7 +9,7 @@ const runner = new TestRunner()
 runner.test('no options', async function () {
   const port = 9000 + this.index
   const lws = new Lws()
-  const server = lws.create({
+  const server = lws.listen({
     stack: Index,
     port: port
   })
