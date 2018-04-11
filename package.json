@@ -16,8 +16,8 @@
     "serve-index-75lb": "^2.0.0"
   },
   "devDependencies": {
-    "lws": "^1.0.0-pre4.0",
+    "lws": "^1.2.1",
     "req-then": "^0.6.4",
-    "test-runner": "^0.4.0"
+    "test-runner": "^0.5.0"
   }
 }

@@ -7,7 +7,7 @@ module.exports = MiddlewareBase => class Index extends MiddlewareBase {
       {
         name: 'index.root',
         type: String,
-        typeLabel: '[underline]{path}',
+        typeLabel: '{underline path}',
         description: 'Index root directory, defaults to --directory or the current directory.'
       },
       {
@@ -18,7 +18,7 @@ module.exports = MiddlewareBase => class Index extends MiddlewareBase {
       {
         name: 'index.view',
         type: String,
-        typeLabel: '[underline]{name}',
+        typeLabel: '{underline name}',
         description: 'Display mode, either `tiles` or `details`. Defaults to tiles.'
       }
     ]
