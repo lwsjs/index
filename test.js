@@ -1,20 +1,21 @@
-const TestRunner = require('test-runner')
+const Tom = require('test-runner').Tom
 const Index = require('./')
 const Lws = require('lws')
-const request = require('req-then')
+const fetch = require('node-fetch')
 const a = require('assert')
 
-const runner = new TestRunner()
+const tom = module.exports = new Tom('index')
 
-runner.test('no options', async function () {
+tom.test('no options', async function () {
   const port = 9000 + this.index
   const lws = new Lws()
   const server = lws.listen({
     stack: Index,
     port: port
   })
-  const response = await request(`http://localhost:${port}/`)
+  const response = await fetch(`http://localhost:${port}/`)
+  const body = await response.text()
   server.close()
-  a.ok(/listing directory/.test(response.data.toString()))
-  a.ok(/class="icon/.test(response.data.toString()))
+  a.ok(/listing directory/.test(body))
+  a.ok(/class="icon/.test(body))
 })

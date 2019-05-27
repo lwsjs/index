@@ -1,7 +1,10 @@
-module.exports = MiddlewareBase => class Index extends MiddlewareBase {
+const EventEmitter = require('events')
+
+class Index extends EventEmitter {
   description () {
     return 'Serves directory listings.'
   }
+
   optionDefinitions () {
     return [
       {
@@ -23,10 +26,11 @@ module.exports = MiddlewareBase => class Index extends MiddlewareBase {
       }
     ]
   }
+
   middleware (options) {
     const path = options.indexRoot || options.directory || process.cwd()
     if (path) {
-      const serveIndex = require('serve-index-75lb')
+      const serveIndex = require('serve-index')
       const indexOptions = { icons: true }
       if (options.indexHidden !== undefined) indexOptions.indexHidden = options.indexHidden
       if (options.indexView !== undefined) indexOptions.indexView = options.indexView
@@ -44,3 +48,5 @@ module.exports = MiddlewareBase => class Index extends MiddlewareBase {
     }
   }
 }
+
+module.exports = Index
