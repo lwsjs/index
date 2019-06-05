@@ -36,13 +36,13 @@ class Index extends EventEmitter {
       if (options.indexView !== undefined) indexOptions.indexView = options.indexView
       this.emit('verbose', 'middleware.index.config', indexOptions)
       const index = serveIndex(path, indexOptions)
-      return (ctx, next) => {
+      return function (ctx, next) {
         return new Promise((resolve, reject) => {
           function expressNext () {
             next()
             resolve()
           }
-          index(ctx.req, ctx.res, expressNext, ctx)
+          index(ctx.req, ctx.res, expressNext)
         })
       }
     }

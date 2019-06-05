@@ -6,7 +6,13 @@
 
 # lws-index
 
-[Serve-index](https://github.com/expressjs/serve-index) middleware for lws.
+[Serve-index](https://github.com/expressjs/serve-index) middleware plugin for lws. Typically used alongside [lws-static](https://github.com/lwsjs/static).
+
+```
+$ npm i --save-dev lws lws-static lws-index
+$ lws --stack static index
+Serving at http://mba4.local:8000, http://127.0.0.1:8000
+```
 
 * * *
 
