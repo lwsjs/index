@@ -6,7 +6,7 @@
 
 # lws-index
 
-[Serve-index](https://github.com/expressjs/serve-index) middleware plugin for lws. Typically used alongside [lws-static](https://github.com/lwsjs/static).
+[Serve-index](https://github.com/expressjs/serve-index) middleware plugin for lws. Serves directory listings, typically used alongside [lws-static](https://github.com/lwsjs/static).
 
 ```
 $ npm i --save-dev lws lws-static lws-index
