@@ -6,12 +6,14 @@
 
 # lws-index
 
-[Serve-index](https://github.com/expressjs/serve-index) middleware plugin for lws. Serves directory listings, typically used alongside [lws-static](https://github.com/lwsjs/static).
+[Lws](https://github.com/lwsjs/lws) middleware plugin to serve directory listings. Wraps [serve-index](https://github.com/expressjs/serve-index), typically used alongside [lws-static](https://github.com/lwsjs/static).
+
+Adds the following options to lws.
 
 ```
-$ npm i --save-dev lws lws-static lws-index
-$ lws --stack static index
-Serving at http://mba4.local:8000, http://127.0.0.1:8000
+--index.root path              Index root directory, defaults to the value of --directory or the current directory.
+--index.hidden                 Show hidden files.
+--index.view name              Display mode, either `tiles` or `details`. Defaults to tiles.
 ```
 
 * * *

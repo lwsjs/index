@@ -11,7 +11,7 @@ class Index extends EventEmitter {
         name: 'index.root',
         type: String,
         typeLabel: '{underline path}',
-        description: 'Index root directory, defaults to --directory or the current directory.'
+        description: 'Index root directory, defaults to the same value as --directory or the current directory.'
       },
       {
         name: 'index.hidden',
