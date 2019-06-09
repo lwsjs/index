@@ -10,6 +10,7 @@
   },
   "keywords": [
     "lws",
+    "lws-middleware",
     "index",
     "server",
     "backend"
