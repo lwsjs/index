@@ -19,7 +19,7 @@
     "test": "test-runner test.js"
   },
   "dependencies": {
-    "serve-index": "^1.9.1"
+    "serve-index-75lb": "^2.0.1"
   },
   "devDependencies": {
     "lws": "^2.0.0-11",

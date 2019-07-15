@@ -30,7 +30,7 @@ class Index extends EventEmitter {
   middleware (options) {
     const path = options.indexRoot || options.directory || process.cwd()
     if (path) {
-      const serveIndex = require('serve-index')
+      const serveIndex = require('serve-index-75lb')
       const indexOptions = { icons: true }
       if (options.indexHidden !== undefined) indexOptions.indexHidden = options.indexHidden
       if (options.indexView !== undefined) indexOptions.indexView = options.indexView
@@ -42,7 +42,7 @@ class Index extends EventEmitter {
             next()
             resolve()
           }
-          index(ctx.req, ctx.res, expressNext)
+          index(ctx.req, ctx.res, expressNext, ctx)
         })
       }
     }
