@@ -1,7 +1,7 @@
 {
   "name": "lws-index",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Serve-index middleware plugin for lws",
   "repository": "https://github.com/lwsjs/index.git",
   "license": "MIT",
