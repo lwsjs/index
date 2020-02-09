@@ -2,9 +2,9 @@ const Tom = require('test-runner').Tom
 const Index = require('./')
 const Lws = require('lws')
 const fetch = require('node-fetch')
-const a = require('assert')
+const a = require('assert').strict
 
-const tom = module.exports = new Tom('index')
+const tom = module.exports = new Tom()
 
 tom.test('no options', async function () {
   const port = 9000 + this.index
