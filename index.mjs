@@ -1,4 +1,5 @@
-const EventEmitter = require('events')
+import EventEmitter from 'events'
+import serveIndex from 'serve-index-75lb'
 
 class Index extends EventEmitter {
   description () {
@@ -30,7 +31,6 @@ class Index extends EventEmitter {
   middleware (options) {
     const path = options.indexRoot || options.directory || process.cwd()
     if (path) {
-      const serveIndex = require('serve-index-75lb')
       const indexOptions = { icons: true }
       if (options.indexHidden !== undefined) indexOptions.indexHidden = options.indexHidden
       if (options.indexView !== undefined) indexOptions.indexView = options.indexView
@@ -49,4 +49,4 @@ class Index extends EventEmitter {
   }
 }
 
-module.exports = Index
+export default Index

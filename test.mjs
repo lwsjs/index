@@ -1,14 +1,15 @@
-const Tom = require('test-runner').Tom
-const Index = require('./')
-const Lws = require('lws')
-const fetch = require('node-fetch')
-const a = require('assert').strict
+import TestRunner from 'test-runner'
+import assert from 'assert'
+import Index from 'lws-index'
+import Lws from 'lws'
+import fetch from 'node-fetch'
+const a = assert.strict
 
-const tom = module.exports = new Tom()
+const tom = new TestRunner.Tom()
 
 tom.test('no options', async function () {
   const port = 9000 + this.index
-  const lws = Lws.create({
+  const lws = await Lws.create({
     stack: Index,
     port: port
   })
@@ -21,7 +22,7 @@ tom.test('no options', async function () {
 
 tom.test('directory links have trailing slash', async function () {
   const port = 9000 + this.index
-  const lws = Lws.create({
+  const lws = await Lws.create({
     stack: Index,
     port: port
   })
@@ -29,5 +30,7 @@ tom.test('directory links have trailing slash', async function () {
   const body = await response.text()
   lws.server.close()
   a.ok(/href="\/node_modules\/"/.test(body))
-  a.ok(/href="\/index.js"/.test(body))
+  a.ok(/href="\/index.mjs"/.test(body))
 })
+
+export default tom
