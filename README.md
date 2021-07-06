@@ -1,7 +1,8 @@
-[![view on npm](https://img.shields.io/npm/v/lws-index.svg)](https://www.npmjs.org/package/lws-index)
-[![npm module downloads](https://img.shields.io/npm/dt/lws-index.svg)](https://www.npmjs.org/package/lws-index)
-[![Build Status](https://travis-ci.org/lwsjs/index.svg?branch=master)](https://travis-ci.org/lwsjs/index)
-[![Dependency Status](https://badgen.net/david/dep/lwsjs/index)](https://david-dm.org/lwsjs/index)
+[![view on npm](https://badgen.net/npm/v/lws-index)](https://www.npmjs.org/package/lws-index)
+[![npm module downloads](https://badgen.net/npm/dt/lws-index)](https://www.npmjs.org/package/lws-index)
+[![Gihub repo dependents](https://badgen.net/github/dependents-repo/lwsjs/lws-index)](https://github.com/lwsjs/lws-index/network/dependents?dependent_type=REPOSITORY)
+[![Gihub package dependents](https://badgen.net/github/dependents-pkg/lwsjs/lws-index)](https://github.com/lwsjs/lws-index/network/dependents?dependent_type=PACKAGE)
+[![Node.js CI](https://github.com/lwsjs/lws-index/actions/workflows/node.js.yml/badge.svg)](https://github.com/lwsjs/lws-index/actions/workflows/node.js.yml)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 
 # lws-index
@@ -18,4 +19,4 @@ Adds the following options to lws.
 
 * * *
 
-&copy; 2016-20 Lloyd Brookes \<75pound@gmail.com\>.
+&copy; 2016-21 Lloyd Brookes \<75pound@gmail.com\>.
