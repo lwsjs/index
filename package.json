@@ -6,7 +6,7 @@
   "repository": "https://github.com/lwsjs/index.git",
   "license": "MIT",
   "engines": {
-    "node": ">=14"
+    "node": ">=12.17"
   },
   "exports": "./index.mjs",
   "keywords": [
@@ -23,9 +23,9 @@
     "serve-index-75lb": "^2.0.1"
   },
   "devDependencies": {
-    "lws": "^4.0.1",
+    "lws": "^4.1.0",
     "node-fetch": "^2.6.1",
-    "test-runner": "^0.9.6"
+    "test-runner": "^0.9.8"
   },
   "files": [
     "index.mjs"
