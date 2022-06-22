@@ -32,8 +32,8 @@ class Index extends EventEmitter {
     const path = options.indexRoot || options.directory || process.cwd()
     if (path) {
       const indexOptions = { icons: true }
-      if (options.indexHidden !== undefined) indexOptions.indexHidden = options.indexHidden
-      if (options.indexView !== undefined) indexOptions.indexView = options.indexView
+      if (options.indexHidden !== undefined) indexOptions.hidden = options.indexHidden
+      if (options.indexView !== undefined) indexOptions.view = options.indexView
       this.emit('verbose', 'middleware.index.config', indexOptions)
       const index = serveIndex(path, indexOptions)
       return function (ctx, next) {
